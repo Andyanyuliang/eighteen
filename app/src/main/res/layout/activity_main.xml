@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.qf.yueshijia01.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:title="悦食家"
+        android:background="#FE7053">
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/radio_group"
+        ></FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#F5F5F5"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_btn_homepage"
+            android:text="悦食家"
+            android:textColor="@drawable/textcolor_select"
+            android:checked="true"
+            android:drawableTop="@drawable/homepage_select"
+            style="@style/mainpageStyle"/>
+        <RadioButton
+            android:id="@+id/radio_btn_column"
+            android:text="兴趣小组"
+            android:textColor="@drawable/textcolor_select"
+            android:drawableTop="@drawable/interest_select"
+            style="@style/mainpageStyle"/>
+        <RadioButton
+            android:id="@+id/radio_btn_topline"
+            android:text="分类"
+            android:textColor="@drawable/textcolor_select"
+            android:drawableTop="@drawable/column_select"
+            style="@style/mainpageStyle"/>
+        <RadioButton
+            android:id="@+id/radio_btn_mine"
+            android:text="我的"
+            android:textColor="@drawable/textcolor_select"
+            android:drawableTop="@drawable/mine_select"
+            style="@style/mainpageStyle"/>
+    </RadioGroup>
+
+
+</RelativeLayout>
